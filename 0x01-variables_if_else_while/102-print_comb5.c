@@ -6,22 +6,33 @@
 */
 int main(void)
 {
-int i;
-for (i = 1; i <= 10000; i++)
+int i, j;  
+int a, b, c, d;  
+for (i = 0; i < 100; i++)
 {
-int w = i%100;
-int z = i/100;
-if(i != 1)
+a = i / 10;
+b = i % 10;
+for (j = 0; j < 100; j++)
 {
-putchar(',');
-putchar(' ');
+c = j / 10;
+d = j % 10;
+if (a < c || (a == c && b < d))
+{
+putchar(a + '0');
+putchar(b + '0');
+putchar(32);
+putchar(c + '0');	      
+putchar(d + '0');    
+if (!(a == 9 && b == 8))		
+{		  
+putchar(44);		  
+putchar(32);
 }
-putchar(z/10 + '0');
-putchar(z%10 + '0');
-putchar(' ');
-putchar(w/10 + '0');
-putchar(w%10 + '0'); 
 }
-putchar('\n');
+}
+}  
+putchar(10);  
 return (0);
 }
+
+	   
