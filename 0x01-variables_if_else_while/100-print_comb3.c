@@ -11,7 +11,7 @@ for (i = 0; i <= 9; i++)
 {
 int b;
 b = i + 1;
-while (b <= 9 )
+while (b <= 9)
 {
 if (b != 1)
 {
