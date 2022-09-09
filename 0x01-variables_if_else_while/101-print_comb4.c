@@ -15,7 +15,7 @@ while (b <= 9)
 {
 int c;
 c = b + 1;
-while(c <= 9)
+while (c <= 9)
 {
 if (c != 2)
 {
