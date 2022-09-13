@@ -10,7 +10,7 @@ void print_to_98(int n)
 {
 if (n >= 98)
 {
-int i;
+int i, f;
 for (i = n; i >= 98; i--)
 {
 if (i != n)
@@ -18,7 +18,7 @@ if (i != n)
 _putchar(',');
 _putchar(' ');
 }
-int f = i;
+f = i;
 if (i >= 100)
 {
 int w = i / 100;
@@ -31,19 +31,19 @@ _putchar(f % 10 + '0');
 }
 else
 {
-if (i != n)
+int y, k;
+for (y = n; y < 98; y++)
+{
+if (y != n)
 {
 _putchar(',');
 _putchar(' ');
 }
-int y;
-for (y = n; y < 98; y++)
-{
 _putchar('-');
-int k = y * -1;
+k = y * -1;
 if (y <= -100)
 {
-int k = (y / 100) * -1;
+k = (y / 100) * -1;
 k = (y % 100) * -1;
 }
 _putchar(k / 10 + '0');
