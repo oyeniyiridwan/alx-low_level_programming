@@ -14,7 +14,8 @@ if (n <= 15 || n >= 0)
 {
 while (i <= n)
 {
-for (int p = 0; p <= n; p++)
+int p = 0;
+for (p = 0; p <= n; p++)
 {
 int w;
 w = i * p;
