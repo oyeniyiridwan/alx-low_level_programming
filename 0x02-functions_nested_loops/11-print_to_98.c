@@ -39,11 +39,15 @@ if (y != n)
 _putchar(',');
 _putchar(' ');
 }
+if ( y < 0)
+{
 _putchar('-');
+}
 k = y * -1;
 if (y <= -100)
 {
-k = (y / 100) * -1;
+int u  = (y / 100) * -1;
+_putchar(u + '0');
 k = (y % 100) * -1;
 }
 _putchar(k / 10 + '0');
