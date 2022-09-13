@@ -12,7 +12,7 @@ int main(void)
 
 char ade[] = "_putchar";
 int i = 0;
- int y = (short) strlen(ade);
+int y = (short) strlen(ade);
 while (i < y)
 {
 _putchar(ade[i]);
