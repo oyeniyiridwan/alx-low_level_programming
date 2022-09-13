@@ -35,6 +35,7 @@ _putchar(w / 100 + '0');
 w = w % 100;
 if (w < 10)
 {
+_putchar(' ');
 _putchar(w / 10 + '0');
 }
 }
@@ -42,7 +43,6 @@ if (w  > 9)
 {
 _putchar(w / 10 + '0');
 }
-
 _putchar(w % 10 + '0');
 }
 _putchar('\n');
