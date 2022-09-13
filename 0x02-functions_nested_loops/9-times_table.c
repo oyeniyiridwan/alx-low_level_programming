@@ -18,7 +18,7 @@ for (p = 0; p < 10; p++)
 {
 int w;
 w = i *p;
-if (w != 0)
+if (p != 0)
 {
 _putchar(',');
 _putchar(' ');
@@ -26,6 +26,10 @@ _putchar(' ');
 if (w  > 9)
 {
 _putchar(w / 10 + '0');
+}
+else if (w != 0)
+{
+_putchar(' ');
 }
 _putchar(w % 10 + '0');
 }
