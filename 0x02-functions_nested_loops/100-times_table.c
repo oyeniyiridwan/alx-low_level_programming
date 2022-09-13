@@ -21,10 +21,11 @@ w = i *p;
 if (p != 0)
 {
 _putchar(',');
-if (w < 10)
+/*if (w < 10)
 {
 _putchar(' ');
 }
+*/
 }
 _putchar(' ');
 if (w < 100)
