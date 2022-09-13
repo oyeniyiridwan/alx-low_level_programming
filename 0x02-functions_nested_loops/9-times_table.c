@@ -27,7 +27,7 @@ if (w  > 9)
 {
 _putchar(w / 10 + '0');
 }
-else if (w != 0)
+else if (p != 0)
 {
 _putchar(' ');
 }
