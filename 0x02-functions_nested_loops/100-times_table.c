@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* times_table - print multiplication table of n
+* print_times_table - print multiplication table of n
 * @n: parameter
 *
 * Return: 0 Always (success)
