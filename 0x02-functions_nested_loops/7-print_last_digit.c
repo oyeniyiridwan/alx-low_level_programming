@@ -12,10 +12,15 @@ int result;
 if (n < 0)
 {
 result = ((n * -1) % 10);
+return (result + (result * 10));
+}
+else if (n > 0)
+{
+result = n % 10;
+return (result + (result * 10));
 }
 else
 {
-result = n % 10;
+return (00);
 }
-return (result);
 }
