@@ -21,9 +21,8 @@ _putchar(' ');
 f = i;
 if (i >= 100)
 {
-int w = i / 100;
 f = i % 100;
-_putchar(w + '0');
+_putchar(i / 100 + '0');
 }
 _putchar(f / 10 + '0');
 _putchar(f % 10 + '0');
@@ -32,7 +31,7 @@ _putchar(f % 10 + '0');
 else
 {
 int y, k;
-for (y = n; y < 98; y++)
+for (y = n; y <= 98; y++)
 {
 k = y;
 if (y != n)
@@ -40,7 +39,7 @@ if (y != n)
 _putchar(',');
 _putchar(' ');
 }
-if ( y < 0)
+if (y < 0)
 {
 k = y * -1;
 _putchar('-');
@@ -48,8 +47,7 @@ _putchar('-');
 
 if (y <= -100)
 {
-int u  = (y / 100) * -1;
-_putchar(u + '0');
+ _putchar(((y / 100) * -1) + '0');
 k = (y % 100) * -1;
 }
 if (y < -9 || y > 9)
@@ -58,10 +56,6 @@ _putchar(k / 10 + '0');
 }
 _putchar(k % 10 + '0');
 }
-_putchar(',');
-_putchar(' ');
-_putchar(98 / 10 + '0');
-_putchar(98 % 10 + '0');
 }
 _putchar('\n');
 }
