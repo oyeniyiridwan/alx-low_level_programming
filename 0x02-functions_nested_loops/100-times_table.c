@@ -17,8 +17,7 @@ while (i <= n)
 int p;
 for (p = 0; p <= n; p++)
 {
-int w;
-w = i *p;
+int w = i * p;
 if (p != 0)
 {
 _putchar(',');
