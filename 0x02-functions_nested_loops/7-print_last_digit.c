@@ -12,15 +12,11 @@ int result;
 if (n < 0)
 {
 result = ((n * -1) % 10);
-return (result + (result * 10));
-}
-else if (n > 0)
-{
-result = n % 10;
-return (result + (result * 10));
 }
 else
 {
-return (00);
+result = n % 10;
 }
+_putchar(result);
+return (result + (result * 10));
 }
