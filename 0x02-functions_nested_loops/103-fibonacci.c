@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* even_fibonacci - print even liber fibonacci
+* main - print even liber fibonacci
 * Description: Print the sum of even Fibonacci numbers up to a fib value
 * not exceeding 4,000,000.
 * Return: 0
 */
 
-int even_fibonacci(void)
+int main(void)
 {
 int i = 1, j = 2, total = 0;
 int k;

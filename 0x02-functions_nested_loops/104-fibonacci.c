@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include "main.h"
 /**
-* first_fibonacci - prints first 100 fibonnaci numbers
+* main - prints first 100 fibonnaci numbers
 *
 * Description: prints from 1 to 98
 * Return: Always(0) Success
 */
 
-int first_fibonacci(void)
+int main(void)
 {
 int num1, num2, i, n;
 int next_num;

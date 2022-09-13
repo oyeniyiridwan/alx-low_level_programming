@@ -1,13 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 /**
-* first_50_fibonacci - prints first 50 numbers of the fibonacci sequence
+* main - prints first 50 numbers of the fibonacci sequence
 *
 * Description: prints from 1 to 50
 * Return: 0
 */
 
-int first_50_fibonacci(void)
+int main(void)
 {
 int i, n, first_count, sec_count, next_num;
 first_count = 1;
