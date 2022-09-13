@@ -17,10 +17,11 @@ while (i <= n)
 int p;
 for (p = 0; p <= n; p++)
 {
-int w = i *p;
+int w;
+w = i *p;
 if (p != 0)
 {
-_putchar(',')
+_putchar(',');
 _putchar(' ');
 }
 if (w < 100)
