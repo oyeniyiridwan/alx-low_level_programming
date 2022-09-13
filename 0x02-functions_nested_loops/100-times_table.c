@@ -25,6 +25,11 @@ _putchar(',');
 _putchar(' ');
 _putchar(' ');
 }
+if( w >100)
+{
+_putchar(w / 100 + '0');
+w = w % 100;
+}
 if (w  > 9)
 {
 _putchar(w / 10 + '0');
