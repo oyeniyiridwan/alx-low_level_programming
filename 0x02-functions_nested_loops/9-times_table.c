@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
-* jack_bauer - print every minute from 00:00 t0 23:59
+* times_table - print multiplication table 9
 *
 * Return: 0 Always (success)
 */
 
-void jack_bauer(void)
+void times_table(void)
 {
 int i;
 i = 0;
-while (i < 9)
+while (i < 10)
 {
 int p;
 
-for (p = 0; p < 9; p++)
+for (p = 0; p < 10; p++)
 {
 int w;
 w = i *p;
