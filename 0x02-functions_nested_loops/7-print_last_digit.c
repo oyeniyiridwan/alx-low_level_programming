@@ -9,14 +9,12 @@
 int print_last_digit(int n)
 {
 int result;
+int digit;
+digit = n % 10;
 if (n < 0)
 {
-result = (n * -1) % 10;
+result = digit *= -1;
 }
-else
-{
-result = n % 10;
-}
-_putchar(result % 10 + '0');
+_putchar(result + '0');
 return (result);
 }
