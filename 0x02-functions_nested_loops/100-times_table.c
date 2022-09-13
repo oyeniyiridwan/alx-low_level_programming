@@ -23,6 +23,7 @@ if (p != 0)
 {
 _putchar(',');
 _putchar(' ');
+_putchar(' ');
 }
 if (w  > 9)
 {
