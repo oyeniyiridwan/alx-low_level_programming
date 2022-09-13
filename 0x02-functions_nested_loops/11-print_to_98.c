@@ -10,6 +10,21 @@ void print_to_98(int n)
 {
 if (n >= 98)
 {
+positive(n);
+}
+else
+{
+negative(n);
+}
+}
+
+/**
+* positive - positive values
+* @n: parameter
+*/
+
+void positive(int n)
+{
 int i, f;
 for (i = n; i >= 98; i--)
 {
@@ -27,8 +42,15 @@ _putchar(i / 100 + '0');
 _putchar(f / 10 + '0');
 _putchar(f % 10 + '0');
 }
+_putchar('\n');
 }
-else
+
+/**
+* negative - negative values
+* @n: parameter
+*/
+
+void negative(int n)
 {
 int y, k;
 for (y = n; y <= 98; y++)
@@ -44,10 +66,9 @@ if (y < 0)
 k = y * -1;
 _putchar('-');
 }
-
 if (y <= -100)
 {
- _putchar(((y / 100) * -1) + '0');
+_putchar(((y / 100) * -1) + '0');
 k = (y % 100) * -1;
 }
 if (y < -9 || y > 9)
@@ -55,7 +76,6 @@ if (y < -9 || y > 9)
 _putchar(k / 10 + '0');
 }
 _putchar(k % 10 + '0');
-}
 }
 _putchar('\n');
 }
