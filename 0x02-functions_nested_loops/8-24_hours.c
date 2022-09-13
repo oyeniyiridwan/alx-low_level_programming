@@ -21,6 +21,7 @@ _putchar(i % 10 + '0');
 _putchar(':');
 _putchar(p / 10 + '0');
 _putchar(p % 10 + '0');
+_putchar('\n');
 }
 i++;
 }
