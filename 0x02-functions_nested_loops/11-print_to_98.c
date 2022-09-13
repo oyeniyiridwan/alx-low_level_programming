@@ -50,7 +50,7 @@ _putchar(k / 10 + '0');
 _putchar(k % 10 + '0');
 }
 _putchar(',');
-_putchat(' ');
+_putchar(' ');
 _putchar('-');
 _putchar(98 / 10 + '0');
 _putchar(98 % 10 + '0');
