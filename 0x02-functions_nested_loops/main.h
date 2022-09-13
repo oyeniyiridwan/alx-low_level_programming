@@ -27,3 +27,11 @@ void positive(int n);
 void negative(int n);
 
 void print_times_table(int n);
+
+int multiple_3(void);
+
+int first_50_fibonacci(void);
+
+int even_fibonacci(void);
+
+int first_fibonacci(void);
