@@ -9,25 +9,20 @@
 
 void print_times_table(int n)
 {
-int i, p, w;
-i = 0;
+int i = 0;
 if (n <= 15 || n >= 0)
 {
 while (i <= n)
 {
+int p;
 for (p = 0; p <= n; p++)
 {
-w = i *p;
+int w = i *p;
 if (p != 0)
 {
-_putchar(',');
-/*if (w < 10)
-{
+_putchar(',')
 _putchar(' ');
 }
-*/
-}
-_putchar(' ');
 if (w < 100)
 {
 _putchar(' ');
