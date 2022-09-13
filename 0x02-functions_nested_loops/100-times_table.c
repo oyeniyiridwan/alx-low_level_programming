@@ -14,10 +14,10 @@ if (n <= 15 || n >= 0)
 {
 while (i <= n)
 {
-int p;
-for (p = 0; p <= n; p++)
+for (int p = 0; p <= n; p++)
 {
-int w = i * p;
+int w;
+w = i * p;
 if (p != 0)
 {
 _putchar(',');
