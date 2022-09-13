@@ -1,12 +1,12 @@
 #include <stdio.h>
 /**
-* multiple_3 - sums multplies of 3 or 5
+* main - sums multplies of 3 or 5
 *
 * Description: multiples between 0 and 1024
 * Return: Always(0) Success
 */
 
-int multiple_3(void)
+int main(void)
 {
 int start_num, end_num, total;
 end_num = 1024;
