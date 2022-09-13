@@ -17,6 +17,6 @@ else
 {
 result = n % 10;
 }
-_putchar(result);
-return (result + (result * 10));
+_putchar(result + '0');
+return (result);
 }
