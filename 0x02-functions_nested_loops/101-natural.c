@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "main.h"
 /**
 * multiple_3 - sums multplies of 3 or 5
 *
