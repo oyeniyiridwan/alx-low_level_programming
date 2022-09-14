@@ -17,13 +17,13 @@ while (i <= n)
 int p = 0;
 for (p = 0; p <= n; p++)
 {
+int w;
 if (p != 0)
 {
 _putchar(',');
 _putchar(' ');
 }
-int w;
-w = i * p;
+ w = i * p;
 if (w < 100)
 _putchar(' ');
 }
