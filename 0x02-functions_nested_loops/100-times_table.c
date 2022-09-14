@@ -26,7 +26,6 @@ _putchar(' ');
  w = i * p;
 if (w < 100)
 _putchar(' ');
-}
 if (w >= 100)
 {
 _putchar(w / 100 + '0');
@@ -40,5 +39,6 @@ _putchar(w % 10 + '0');
 }
 _putchar('\n');
 i++;
+}
 }
 }
