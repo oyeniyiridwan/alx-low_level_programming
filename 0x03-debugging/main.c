@@ -8,8 +8,6 @@
 
 int main(void)
 {
-int a;
-a = largest_number(2, 2, 2);
-printf("%d largest", a);
+print_remaining_days(3, 60, 1800);
 return (0);
 }
