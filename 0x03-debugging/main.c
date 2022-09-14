@@ -9,7 +9,7 @@
 int main(void)
 {
 int a;
-a = largest_number(2.0, 972, 3);
+a = largest_number(2, 2, 2);
 printf("%d largest", a);
 return (0);
 }
