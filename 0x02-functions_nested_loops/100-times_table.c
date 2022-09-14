@@ -24,7 +24,7 @@ _putchar(',');
 _putchar(' ');
 }
 w = i * p;
-if(w < 10)
+if (w < 10)
 _putchar(' ');
 if (w < 100)
 _putchar(' ');
@@ -32,7 +32,7 @@ if (w >= 100)
 {
 _putchar(w / 100 + '0');
 w = w % 100;
-if (w < 10)
+if (w < 10 && p != 0)
 _putchar(w / 10 + '0');
 }
 if (w  > 9)
