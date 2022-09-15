@@ -9,39 +9,37 @@
 
 void print_number(int n)
 {
-int a, b, c, d;
-if (n < 0)
+if ((n < 0) && (n >= -9))
 {
 _putchar('-');
-n = n * -1;
+_putchar((n * -1) + '0');
 }
-if (n >= 10000)
+else if (n <= -10)
 {
-_putchar(n / 10000 + '0');
-a = n % 10000;
+_putchar('-');
+_putchar(((n / 10) * -1) + '0');
+_putchar(((n % 10)  * -1) + '0');
 }
-else
-a = n;
-if (a >= 1000 || n >= 10000)
+else if ((n >= 0) && (n <= 9))
 {
-_putchar(a / 1000 + '0');
-b = a % 1000;
+_putchar(n + '0');
 }
-else
-b = a;
-if (b >= 100 || a >= 1000 || n >= 10000)
+else if ((n >= 10) && (n <= 99))
 {
-_putchar(b / 100 + '0');
-c = b % 100;
+_putchar((n / 10) + '0');
+_putchar((n % 10) + '0');
 }
-else
-c = b;
-if (c >= 10 || b >= 100 || a >= 1000 || n >= 10000)
+else if ((n >= 100) && (n <= 999))
 {
-_putchar(c / 10 + '0');
-d = c % 10;
+_putchar((n / 100) + '0');
+_putchar(((n / 10) % 10) + '0');
+_putchar((n % 10) + '0');
 }
-else
-d = c;
-_putchar(d % 10 + '0');
+else if ((n >= 1000) && (n <= 9999))
+{
+_putchar((n / 1000) + '0');
+_putchar((n / 100) % 10 + '0');
+_putchar((n / 10) % 10 + '0');
+_putchar((n % 10) + '0');
+}
 }
