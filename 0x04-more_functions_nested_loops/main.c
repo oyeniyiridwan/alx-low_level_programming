@@ -8,11 +8,11 @@
 
 int main(void)
 {
-print_number(-349);
+print_number(-50203);
 _putchar('\n');
-print_number(54000);
- _putchar('\n'); 
-print_number(5);
+print_number(402);
+_putchar('\n');
+print_number(4002);
 _putchar('\n'); 
 print_number(1024);
 return (0);
