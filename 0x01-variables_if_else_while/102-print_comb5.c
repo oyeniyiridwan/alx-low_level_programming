@@ -2,35 +2,33 @@
 /**
 * main -Entry point
 *
-* Return: Always 0 (Success)
+* Return: 0 Always (success)
 */
 int main(void)
 {
-int i, j;
-int a, b, c, d;
-for (i = 0; i < 100; i++)
+int i;
+i = 0;
+while (i < 100)
 {
-a = i / 10;
-b = i % 10;
-for (j = 0; j < 100; j++)
+int p;
+
+for (p = 0; p < 100; p++)
 {
-c = j / 10;
-d = j % 10;
-if (a < c || (a == c && b < d))
+if (p > i)
 {
-putchar(a + '0');
-putchar(b + '0');
-putchar(32);
-putchar(c + '0');
-putchar(d + '0');
-if (!(a == 9 && b == 8))
+if (i != 0 && p != 1)
 {
-putchar(44);
-putchar(32);
+putchar(',');
+putchar(' ');
+}
+putchar(i / 10 + '0');
+putchar(i % 10 + '0');
+putchar(' ');
+putchar(p / 10 + '0');
+putchar(p % 10 + '0');
 }
 }
+i++;
 }
-}
-putchar(10);
 return (0);
 }
