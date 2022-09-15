@@ -11,5 +11,9 @@ int main(void)
 print_number(-349);
 _putchar('\n');
 print_number(54000);
+ _putchar('\n'); 
+print_number(5);
+_putchar('\n'); 
+print_number(1024);
 return (0);
 }
