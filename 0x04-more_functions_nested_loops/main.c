@@ -8,7 +8,7 @@
 
 int main(void)
 {
-print_square(-15);
-print_square(6);
+print_triangle(-15);
+print_triangle(6);
 return (0);
 }
