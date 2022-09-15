@@ -11,7 +11,7 @@ void print_most_numbers(void)
 int a = 0;
 while (a <= 9)
 {
-if (a != 2 && a != 3)
+if (a != '2' && a != '3')
 {
 _putchar(a + '0');
 }
