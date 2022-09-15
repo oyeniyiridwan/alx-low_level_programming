@@ -26,7 +26,7 @@ while (z > 0)
 _putchar('#');
 z--;
 }
-if(a != size)
+if (a != size)
 {
 _putchar('\n');
 }
