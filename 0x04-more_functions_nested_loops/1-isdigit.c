@@ -4,12 +4,12 @@
 * _isdigit - check if c is a number between (0-9)
 * @c: parameter
 *
-* Return: 1 (True)
+* Return: 0 (Success)
 */
 
 int _isdigit(int c)
 {
-if (c <= 9)
+if (c >= 0)
 {
 return (1);
 }
