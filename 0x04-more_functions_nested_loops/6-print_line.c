@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* print_line - print "-" n times horizontally
+* print_line - print "_" n times horizontally
 * @n: parameter
 *
 * Return: 0 (Success)
@@ -14,7 +14,7 @@ if (n > 0)
 int a = 0;
 while (a < n)
 {
-_putchar('-');
+_putchar('_');
 a++;
 }
 }
