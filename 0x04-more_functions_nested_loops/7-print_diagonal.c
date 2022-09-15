@@ -24,4 +24,8 @@ _putchar('\n');
 a++;
 }
 }
+else
+{
+_putchar('\n');
+}
 }
