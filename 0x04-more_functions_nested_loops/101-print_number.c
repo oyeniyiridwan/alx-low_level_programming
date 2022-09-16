@@ -8,38 +8,30 @@
 */
 
 void print_number(int n)
+
 {
-if ((n < 0) && (n >= -9))
+unsigned int a, b;
+int i;
+int c = 1;
+if (n < 0)
 {
+n = n * -1;
 _putchar('-');
-_putchar((n * -1) + '0');
 }
-else if (n <= -10)
+a = n;
+b = a;
+if (a > 9)
 {
-_putchar('-');
-_putchar(((n / 10) * -1) + '0');
-_putchar(((n % 10)  * -1) + '0');
-}
-else if ((n >= 0) && (n <= 9))
+while (a >= 10)
 {
-_putchar(n + '0');
+c = c * 10;
+a = a / 10;
 }
-else if ((n >= 10) && (n <= 99))
-{
-_putchar((n / 10) + '0');
-_putchar((n % 10) + '0');
+_putchar((b / c) +'0');
+c = c / 10;
+for (i = c; i >= 1; i = i / 10)
+_putchar((b / i) % 10 + '0');
 }
-else if ((n >= 100) && (n <= 999))
-{
-_putchar((n / 100) + '0');
-_putchar(((n / 10) % 10) + '0');
-_putchar((n % 10) + '0');
-}
-else if ((n >= 1000) && (n <= 9999))
-{
-_putchar((n / 1000) + '0');
-_putchar((n / 100) % 10 + '0');
-_putchar((n / 10) % 10 + '0');
-_putchar((n % 10) + '0');
-}
+else
+_putchar(a + '0');
 }
