@@ -1,23 +1,29 @@
+
 #include "main.h"
 
 /**
-* print_rev - print str in reverse order
+* rev_string - reverse s
 * @s: parameters
 *
 * Return: o Always(Success)
 */
 
-void print_rev(char *s)
+void rev_string(char *s)
 {
 
 int i = 0;
+int w;
+int p = 0;
 while (s[i] != '\0')
 {
 i++;
 }
-while (i >= 0)
-{
-_putchar(s[i]);
 i--;
+while (i > p)
+
+{
+w = s[i];
+s[i--] = s[p];
+s[p++] = w;
 }
 }
