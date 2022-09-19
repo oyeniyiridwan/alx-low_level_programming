@@ -8,10 +8,8 @@
 
 int main(void)
 {
-char *str;
-int len;
-str = "My first strlen!";
-len = _strlen(str);
-printf("%d\n", len);
+char str[16] = "My first strlen!";
+rev_string(str);
+printf("%s\n",str);
 return (0);
 }
