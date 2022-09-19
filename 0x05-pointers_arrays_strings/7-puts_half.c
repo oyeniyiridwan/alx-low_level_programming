@@ -18,7 +18,7 @@ i++;
 }
 i--;
 q = i / 2;
-for (w = 0; w > q; w++)
+for (w = q + 1; w <= i; w++)
 {
 _putchar(str[w]);
 }
