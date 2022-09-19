@@ -39,5 +39,5 @@ for (n = i - z; n < i; n++)
 p = p + ((s[n] - 48) * w);
 w /= 10;
 }
-return (p * h);
+return (p *h);
 }
