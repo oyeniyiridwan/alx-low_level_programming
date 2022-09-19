@@ -23,7 +23,7 @@ sum += random_number;
 while (1)
 {
 random_number = (rand() % (127 - 33 + 1)) + 33;
-if (sum + random_number == 2772
+if (sum + random_number == 2772)
 {
 printf("%c", random_number);
 break;
