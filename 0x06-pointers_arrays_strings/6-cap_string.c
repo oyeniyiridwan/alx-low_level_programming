@@ -11,11 +11,11 @@ char *cap_string(char *n)
 {
 int i;
 int len = _strlen(n);
-char ade[13] = " ,;.\n\t!?\"(){}";
+char ade[14] = "' ,;.\n\t!?\"(){}";
 for (i = 0; i < len; i++)
 {
 int p;
-for (p = 0; p < 13; p++)
+for (p = 0; p < 14; p++)
 {
 if (n[i] == ade[p])
 {
