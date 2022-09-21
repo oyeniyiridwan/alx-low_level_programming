@@ -17,6 +17,8 @@ for (i = 0; i < len; i++)
 int p;
 for (p = 0; p < 14; p++)
 {
+if (i = 0 && (n[0] >= 'a' && n[0] <= 'z'))
+n[i] = n[i] -32;
 if (n[i] == ade[p])
 {
 if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
