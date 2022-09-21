@@ -11,7 +11,7 @@ char *rot13(char *s)
 {
 int i;
 char lower[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-char upper[52] = "nopqrstuvwxyzabcdefgnijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+char upper[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 i = 0;
  while (s[i] != '\0')
