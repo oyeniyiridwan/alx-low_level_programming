@@ -13,7 +13,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 int i;
 int srclen = _strlen(src);
-int destlen = _strlen(dest);
+
 if (n < srclen)
 {
 for (i = 0; i < n; i++)
@@ -24,7 +24,7 @@ return (dest);
 }
 else
 {
-for (i = 0; i < destlen; i++)
+for (i = 0; i < n; i++)
 {
 if (i < srclen)
 dest[i] = src[i];
