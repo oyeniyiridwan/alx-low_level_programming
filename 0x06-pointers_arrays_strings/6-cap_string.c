@@ -11,14 +11,19 @@ char *cap_string(char *n)
 {
 int i;
 int len = _strlen(n);
-
+char ade[13] = " ,;.\n\t!?\"(){}";
 for (i = 0; i < len; i++)
 {
 int p;
-p = n[i];
-if (p < 48 || (p > 57 && p < 65) || p > 122 || (p > 90 && p < 97))
+for (p = 0; p < 13; p++)
+{
+if (n[i] == ade[p])
+{
 if (n[i + 1] >= 'a' && n[i + 1] <= 'z')
 n[i + 1] = n[i + 1] - 32;
+break;
+}
+}
 }
 return (n);
 }
