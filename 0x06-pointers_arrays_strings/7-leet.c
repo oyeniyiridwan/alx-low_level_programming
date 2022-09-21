@@ -10,37 +10,19 @@
 char *leet(char *s)
 {
 int i;
-int len = _strlen(s);
-char lower[5] = "aeotl";
-char upper[5] = "AEOTL";
-char number[5] = "43071";
+char lower[5] = "aeotlAEOTL";
+char number[5] = "4307143071";
 
-for (i = 0; i < len; i++)
+i = 0;
+while (s[i] != '\0')
 {
 int q;
-for (q = 0; q < 5; q++)
+for (q = 0; q < 10; q++)
 {
-if (s[i] == lower[q] || s[i] == upper[q])
-{
+if (s[i] == lower[q])
 s[i] = number[q];
 }
-}
-}
-return (s);
-}
-
-/**
-* _strlen - returns length of str
-* @str: parameter
-*
-* Return: Always an int
-*/
-int _strlen(char *str)
-{
-int i = 0;
-while (str[i] != '\0')
-{
 i++;
 }
-return (i);
+return (s);
 }
