@@ -26,7 +26,7 @@ else
 {
 for (i = 0; i < destlen; i++)
 {
-if (i <= srclen)
+if (i < srclen)
 dest[i] = src[i];
 else
 dest[i] = '\0';
