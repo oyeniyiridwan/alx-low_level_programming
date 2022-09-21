@@ -21,7 +21,7 @@ length = len;
 else
 length = len2;
 r[length + 1] = '\0';
-if (length + 1 >= size_r)
+if (length >= size_r)
 return (0);
 else
 {
