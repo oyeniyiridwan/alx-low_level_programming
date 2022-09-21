@@ -1,4 +1,9 @@
 #include <stdio.h>
+/**
+* main - print 98
+*
+* Return: Always 0 (success)
+*/
 
 int main(void)
 {
