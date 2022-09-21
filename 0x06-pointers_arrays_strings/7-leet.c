@@ -10,8 +10,8 @@
 char *leet(char *s)
 {
 int i;
-char lower[5] = "aeotlAEOTL";
-char number[5] = "4307143071";
+char lower[10] = "aeotlAEOTL";
+char number[10] = "4307143071";
 
 i = 0;
 while (s[i] != '\0')
