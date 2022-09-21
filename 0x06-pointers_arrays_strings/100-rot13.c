@@ -14,7 +14,7 @@ char lower[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char upper[52] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 i = 0;
- while (s[i] != '\0')
+while (s[i] != '\0')
 {
 int q;
 for (q = 0; q < 52; q++)
