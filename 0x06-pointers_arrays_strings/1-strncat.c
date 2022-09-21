@@ -30,7 +30,7 @@ dest[destlen + i] = src[i];
 }
 dest[destlen + srclen] = '\0';
 }
-return dest;
+return (dest);
 }
 
 /**

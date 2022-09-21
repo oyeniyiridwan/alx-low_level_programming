@@ -24,7 +24,7 @@ if (s[i] == lower[q])
 s[i] = upper[q];
 break;
 }
-} 
+}
 }
 return (s);
 }
