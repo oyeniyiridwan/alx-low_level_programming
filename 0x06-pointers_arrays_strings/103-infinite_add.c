@@ -21,11 +21,11 @@ length = len;
 else
 length = len2;
 r[length + 1] = '\0';
-if (length >= size_r)
+if (length + 1 >= size_r)
 return (0);
 else
 {
-for (p = 0; p <= length; p++)
+for (p = 0; p < length; p++)
 {
 int a;
 int b;
