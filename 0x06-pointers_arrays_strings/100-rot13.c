@@ -10,11 +10,11 @@
 char *rot13(char *s)
 {
 int i;
-int len = _strlen(s);
 char lower[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 char upper[52] = "nopqrstuvwxyzabcdefgnijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-for (i = 0; i < len; i++)
+i = 0;
+ while (s[i] != '\0')
 {
 int q;
 for (q = 0; q < 52; q++)
@@ -25,22 +25,7 @@ s[i] = upper[q];
 break;
 }
 }
-}
-return (s);
-}
-
-/**
-* _strlen - returns length of str
-* @str: parameter
-*
-* Return: Always an int
-*/
-int _strlen(char *str)
-{
-int i = 0;
-while (str[i] != '\0')
-{
 i++;
 }
-return (i);
+return (s);
 }
