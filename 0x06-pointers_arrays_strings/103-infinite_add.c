@@ -12,10 +12,7 @@
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-int p, add = 0;
-int len = _strlen(n1);
-int len2 = _strlen(n2);
-int length;
+int p, length, add = 0, len = _strlen(n1), len2 = _strlen(n2);
 if (len > len2)
 length = len;
 else
@@ -25,11 +22,9 @@ if (length + 1 >= size_r)
 return (0);
 else
 {
-for (p = 0; p < length; p++)
+for (p = 0; p <= length; p++)
 {
-int a;
-int b;
-int c;
+int a, b, c;
 if ((len - 1 - p) < 0)
 a = 0;
 else
@@ -47,6 +42,12 @@ c = c % 10;
 else
 add = 0;
 r[length - p] = c + 48;
+}
+if (r[0] == '0')
+{
+int h;
+for (h = 0; h <= length + 1; h++)
+r[h] = r[h + 1];
 }
 return (r);
 }
