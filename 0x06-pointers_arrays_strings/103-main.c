@@ -47,6 +47,7 @@ int main(void)
     {
       
       printf("%s + %s = %s\n", n, m, res);
+      printf("%c, %c, %c, %c, %c, \n", res[86], res[87], res[88], res[89], res[90]);
       
     }
   
@@ -109,7 +110,7 @@ int main(void)
     {
       
       printf("%s + %s = %s\n", n, m, res);
-      
+    
     }
   
   return (0);

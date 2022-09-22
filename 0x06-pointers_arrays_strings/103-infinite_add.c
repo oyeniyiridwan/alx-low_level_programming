@@ -17,7 +17,6 @@ if (len > len2)
 length = len;
 else
 length = len2;
-r[length + 1] = '\0';
 if (length + 1 >= size_r)
 return (0);
 else
@@ -36,8 +35,7 @@ b = n2[len2 - 1 - p] - 48;
 c = a + b + add;
 if (c > 9)
 {
-add = c / 10;
-c = c % 10;
+add = c / 10, c = c % 10;
 }
 else
 add = 0;
@@ -46,9 +44,12 @@ r[length - p] = c + 48;
 if (r[0] == '0')
 {
 int h;
-for (h = 1; h <= length + 2; h++)
+for (h = 1; h <= length; h++)
 r[h - 1] = r[h];
+r[length] = '\0';
 }
+else
+r[length + 1] = '\0';
 return (r);
 }
 }
