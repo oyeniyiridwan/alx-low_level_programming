@@ -46,8 +46,8 @@ r[length - p] = c + 48;
 if (r[0] == '0')
 {
 int h;
-for (h = 0; h <= length + 1; h++)
-r[h] = r[h + 1];
+for (h = 1; h <= length + 2; h++)
+r[h - 1] = r[h];
 }
 return (r);
 }
