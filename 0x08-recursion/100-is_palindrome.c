@@ -2,7 +2,7 @@
 
 
 /**
-* is_palinrome - check if the string is identical
+* is_palindrome - check if the string is identical
 * @s: parameter
 *
 * Return: Always 0 (Success)
