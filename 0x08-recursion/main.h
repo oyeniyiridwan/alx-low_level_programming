@@ -17,3 +17,7 @@ int square(int w, int p);
 int is_prime_number(int n);
 
 int prime(int w, int p);
+
+int is_palindrome(char *s);
+
+int compare(char *s, int i, int j);
