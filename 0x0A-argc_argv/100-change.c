@@ -19,7 +19,7 @@ int w = atoi(argv[1]);
 if (w < 0)
 {
 printf("%d", 0);
-return (0);
+return (1);
 }
 sum = sum + (w / 25);
 w = w % 25;
