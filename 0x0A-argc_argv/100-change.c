@@ -18,8 +18,8 @@ if (argc == 2)
 int w = atoi(argv[1]);
 if (w < 0)
 {
-printf("%d", 0);
-return (1);
+printf("%d\n", 0);
+return (0);
 }
 sum = sum + (w / 25);
 w = w % 25;
