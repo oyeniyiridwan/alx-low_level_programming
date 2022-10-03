@@ -15,7 +15,7 @@ unsigned int len = _strlen(str);
 char *p;
 unsigned int i;
 p = malloc(len * sizeof(char) + 1);
-if (str == NULL || p == NULL)
+if (str == 0 || p == NULL)
 return (NULL);
 for (i = 0; i <= len; i++)
 {
