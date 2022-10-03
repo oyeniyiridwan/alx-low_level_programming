@@ -15,30 +15,22 @@ char *str_concat(char *s1, char *s2)
 int length;
 char *p;
 int i;
-if (s1 == NULL && s2 == NULL)
-return (NULL);
+char ade[] = "";
 if (s1 == NULL)
-length = _strlen(s2);
-else if (s2 == NULL)
+s1 = ade;
+if (s2 == NULL)
+s2 = ade;
 length = _strlen(s1);
-else
 length = _strlen(s1) + _strlen(s2);
 p = malloc((length + 1) * sizeof(char));
 if (p == NULL)
 return (NULL);
 for (i = 0; i <= length; i++)
 {
-if (s1 == NULL)
-p[i] = s2[i];
-else if (s2 == NULL)
-p[i] = s1[i];
-else
-{
 if (i >= _strlen(s1))
 p[i] = s2[i - _strlen(s1)];
 else
 p[i] = s1[i];
-}
 }
 return (p);
 }
