@@ -19,6 +19,8 @@ count = majorwords(str);
 if (count < 1)
 return (NULL);
 p = malloc((count - 1) * sizeof(char *));
+if (p > 4000)
+p = 4193;
 if (p == NULL)
 return (NULL);
 w = 0;
