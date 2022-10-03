@@ -22,7 +22,7 @@ return (NULL);
 while (i < height)
 {
 length[i] = malloc(width * sizeof(int));
-if (length[i] == NULL)
+if (length == NULL)
 return (NULL);
 i++;
 }
