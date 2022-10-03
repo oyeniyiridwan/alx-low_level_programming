@@ -12,19 +12,33 @@
 
 char *str_concat(char *s1, char *s2)
 {
-unsigned int len1 = _strlen(s1);
-unsigned int len2 = _strlen(s2);
+int length;
 char *p;
-unsigned int i;
-p = malloc((len1 + len2 + 1) * sizeof(char));
-if (len1 == 0 || len2 == 0 || p == NULL)
+int i;
+if (s1 == NULL && s2 == NULL)
 return (NULL);
-for (i = 0; i <= (len1 + len2); i++)
+if (s1 == NULL)
+length = _strlen(s2);
+else if (s2 == NULL)
+length = _strlen(s1);
+else
+length = _strlen(s1) + _strlen(s2);
+p = malloc((length + 1) * sizeof(char));
+if (p == NULL)
+return (NULL);
+for (i = 0; i <= length; i++)
 {
-if (i >= len1)
-p[i] = s2[i - len1];
+if (s1 == NULL)
+p[i] = s2[i];
+else if (s2 == NULL)
+p[i] = s1[i];
+else
+{
+if (i >= _strlen(s1))
+p[i] = s2[i - _strlen(s1)];
 else
 p[i] = s1[i];
+}
 }
 return (p);
 }
