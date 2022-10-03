@@ -18,7 +18,7 @@ return (NULL);
 count = majorwords(str);
 if (count < 1)
 return (NULL);
-p = malloc((count + 1) * sizeof(char *));
+ p = malloc(((count) * sizeof(char *)) + 1);
 if (p == NULL)
 return (NULL);
 w = 0;
