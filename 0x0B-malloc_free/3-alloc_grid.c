@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
-* alloc_grid - initialize each element in gid to 0
+* alloc_grid - initialize each element in grid to 0
 * @width: parameter
 * @height: parameter
 *
@@ -22,8 +22,8 @@ return (NULL);
 for (i = 0; i < height; i++)
 {
 length[i] = malloc(width * sizeof(int));
-}
-if (length != NULL)
-return (length);
+if (length[i] == NULL)
 return (NULL);
+}
+return (length);
 }
