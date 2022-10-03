@@ -16,7 +16,7 @@ int i = 0;
 int **length;
 if (width <= 0 || height <= 0)
 return (NULL);
-length = malloc(height * sizeof(int *));
+length = (int **) malloc(height * sizeof(int *));
 if (length == 0)
 return (NULL);
 while (i < height)
