@@ -24,6 +24,8 @@ for (i = 0; i < height; i++)
 length[i] = malloc(width * sizeof(int));
 if (length[i] == NULL)
 {
+while (--i >= 0)
+free(length[i]);
 free(length);
 return (NULL);
 }
