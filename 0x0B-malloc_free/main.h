@@ -17,3 +17,7 @@ char **strtow(char *str);
 int majorwords(char *str);
 
 int count(char *str, int i);
+
+int num_words(char *str);
+
+int len(char *str);
