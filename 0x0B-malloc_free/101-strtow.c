@@ -1,86 +1,103 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
-* strtow - split strings into words
-* @str: parameter
+* strtow - splits a stirng into words
+* @str: string to be splitted
 *
-* Return: NULL if it fails
+* Return: pointer to the array of splitted words
 */
+
 
 char **strtow(char *str)
 {
-char **p;
-int count, w, q, z;
-if (str == NULL || str[0] == 0)
+char **split;
+int i, j = 0, temp = 0, size = 0, words = num_words(str);
+if (words == 0)
 return (NULL);
-count = majorwords(str);
-if (count < 1)
-return (NULL);
-p = (char **) malloc((count + 1) * sizeof(str));
-if (p == NULL)
-return (NULL);
-w = 0;
-while (w < count && *str != '\0')
+split = (char **) malloc(sizeof(char *) * (words + 1));
+if (split != NULL)
 {
-if (*str != ' ')
+for (i = 0; i <= len(str) && words; i++)
 {
-q = 0;
-while (str[q] != ' ')
-q++;
-p[w] = malloc(sizeof(char) * (q));
-if (p[w] == NULL)
+if ((str[i] != ' ') && (str[i] != '\0'))
+size++;
+else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
 {
-while (--w >= 0)
-free(p[--w]);
-free(p);
+split[j] = (char *) malloc(sizeof(char) * size + 1);
+if (split[j] != NULL)
+{
+while (temp < size)
+{
+split[j][temp] = str[(i - size) +temp];
+temp++;
+}
+split[j][temp] = '\0';
+size = temp = 0;
+j++;
+}
+else
+{
+while (j-- >= 0)
+free(split[j]);
+free(split);
 return (NULL);
 }
-z = 0;
-while (z < q)
-{
-p[w][z] = *str;
-z++, str++;
 }
-
-w++;
 }
-str++;
+split[words] = NULL;
+return (split);
 }
-p[w] = '\0';
-return (p);
+else
+return (NULL);
 }
 
 
 /**
-* count - count words
-* @str: parameter
-* @i: parameter
+* num_words - counts the number of words in str
+* @str: string to be used
 *
-* Return: total words
+* Return: number of words
 */
 
-int count(char *str, int i)
+
+int num_words(char *str)
 {
-if (str[i] == '\0')
-return (0);
-if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1] != '\0')
-return (1 + count(str, i + 1));
-return (count(str, i + 1));
+int i = 0, words = 0;
+while (i <= len(str))
+{
+if ((str[i] != ' ') && (str[i] != '\0'))
+{
+i++;
+}
+else if (((str[i] == ' ') || (str[i] == '\0')) && i && (str[i - 1] != ' '))
+{
+words += 1;
+i++;
+}
+else
+{
+i++;
+}
+}
+return (words);
 }
 
 
 /**
-* majorwords - gives perfect count
-* @str: parameter
+* len - returns length of str
+*@str: string to be counted
 *
-* Return: total words
+* Return: length of the string
 */
 
-int majorwords(char *str)
+int len(char *str)
 {
-if (str[0] != ' ')
-return (1 + count(str, 0));
-return (count(str, 0));
+int len = 0;
+if (str != NULL)
+{
+while (str[len])
+len++;
+}
+return (len);
 }

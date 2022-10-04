@@ -18,7 +18,7 @@ return (NULL);
 count = majorwords(str);
 if (count < 1)
 return (NULL);
-p = malloc(((count + 1) * sizeof(str)) - 241);
+p = (char **) malloc((count + 1) * sizeof(str));
 if (p == NULL)
 return (NULL);
 w = 0;
@@ -29,7 +29,7 @@ if (*str != ' ')
 q = 0;
 while (str[q] != ' ')
 q++;
-p[w] = malloc(sizeof(char) * (q - 1));
+p[w] = malloc(sizeof(char) * (q));
 if (p[w] == NULL)
 {
 while (--w >= 0)
