@@ -29,7 +29,7 @@ if (*str != ' ')
 q = 0;
 while (str[q] != ' ')
 q++;
-p[w] = malloc(sizeof(char) * (q));
+p[w] = malloc(sizeof(char) * (q - 1));
 if (p[w] == NULL)
 {
 while (--w >= 0)
@@ -43,7 +43,8 @@ while (z < q)
 p[w][z] = *str;
 z++, str++;
 }
-p[w][z] = '\0';
+/*p[w][z] = '\0';
+ */
 w++;
 }
 str++;
