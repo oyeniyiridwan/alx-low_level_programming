@@ -16,7 +16,7 @@ unsigned int a, b;
 unsigned char *p;
 if (ptr == NULL)
 {
-ptr = malloc(new_size)
+ptr = malloc(new_size);
 if (ptr == NULL)
 return (NULL);
 return (ptr);
