@@ -25,7 +25,10 @@ if (new_size == old_size)
 return (ptr);
 p = malloc(new_size);
 if (p == NULL)
+  {
+    free(ptr);
 return (NULL);
+  }
 if (old_size < new_size)
 a = old_size;
 else
