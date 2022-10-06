@@ -24,7 +24,7 @@ _putchar('\n');
 exit(98);
 }
 result = solution(argv[1], argv[2]);
-for (a = 0; result[a] != '\0'; a++)
+for (a = 0; result[a]; a++)
 _putchar(result[a]);
 _putchar('\n');
 return (0);
@@ -131,6 +131,7 @@ r[length + 1 + k] = '0';
 }
 final = malloc(sizeof(r));
 infinite_add(r, last, final);
+free(r);
 return (infinite_multiply(n1, b2, len - 1, final));
 }
 return (last);
