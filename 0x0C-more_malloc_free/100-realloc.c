@@ -32,5 +32,6 @@ else
 a = new_size;
 for (b = 0; b < a; b++)
 p[b] = ((char *)ptr)[b];
+free(ptr);
 return (p);
 }
