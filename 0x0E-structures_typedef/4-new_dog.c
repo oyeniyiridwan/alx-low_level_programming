@@ -42,18 +42,3 @@ o[j] = '\0';
 (*new_dog).age = age;
 return (new_dog);
 }
-
-/**
-* length - get the length of s
-* @s: parameter
-*
-* Return: length
-*/
-
-int length(char *s)
-{
-int a = 0;
-while (s[a])
-a++;
-return (a);
-}
