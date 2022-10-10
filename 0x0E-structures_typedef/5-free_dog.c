@@ -3,10 +3,10 @@
 #include <stdio.h>
 
 /**
-* free_dogs - free dogs
+* free_dog - free dogs
 * @d: parameter
+* Descriptions: the progran frees dogs
 *
-* Return: Always o (Success)
 */
 
 void free_dog(dog_t *d)
