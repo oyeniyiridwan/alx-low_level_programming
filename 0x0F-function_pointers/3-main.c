@@ -14,7 +14,6 @@
 int main(int argc, char **argv)
 {
 int (*f)(int, int);
-char a;
 if (argc != 4)
 {
 printf("Error\n"),
@@ -25,12 +24,6 @@ if (!f || (strlen(argv[2]) > 1))
 {
 printf("Error\n"),
 exit(99);
-}
-a = argv[2][0];
-if ((a == '/' || a == '%') && (atoi(argv[3]) == 0))
-{
-printf("Error\n");
-exit(100);
 }
 printf("%i\n", f(atoi(argv[1]), atoi(argv[3])));
 return (1);
