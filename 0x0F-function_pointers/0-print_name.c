@@ -2,7 +2,7 @@
 
 /**
 * print_name - print name
-* @nane: parameter
+* @name: parameter
 * @f: pointer to function
 *
 * Return: Always 0 (Success)
