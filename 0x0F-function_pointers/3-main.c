@@ -23,5 +23,5 @@ printf("Error\n"),
 exit(99);
 }
 printf("%i\n", f(atoi(argv[1]), atoi(argv[3])));
-return (1);
+return (0);
 }
