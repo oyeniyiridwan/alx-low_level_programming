@@ -19,7 +19,7 @@ if (n != 0)
 for (i = 0; i < n; i++)
 {
 s = va_arg(ap, char *);
-if (!s)
+if (!s || s = "")
 s = "(nil)";
 printf("%s", s);
 if (i != (n - 1) && separator != NULL)
