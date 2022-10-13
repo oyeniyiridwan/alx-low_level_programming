@@ -21,9 +21,10 @@ for (i = 0; i < n; i++)
 s = va_arg(ap, char *);
 if (!s)
 s = "(nil)";
+if (!separator ||  (separator && !i))
 printf("%s", s);
-if (i != (n - 1) && (separator != NULL))
-printf("%s", separator);
+else
+printf("%s%s", separator, s);
 }
 printf("\n");
 va_end(ap);
