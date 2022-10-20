@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
 * print_list - print element of h
@@ -10,11 +9,15 @@
 
 size_t print_list(const list_t *h)
 {
-register int i = 0;
-while (h)
+const list_t *c = h;
+size_t i = 0;
+while (c)
 {
+if (c->str)
 printf("[%d] [%s]\n", h->len, h->str);
-h = h->next;
+else
+printf("[0] (nil)\n");
+c = c->next;
 i++;
 }
 return (i);
