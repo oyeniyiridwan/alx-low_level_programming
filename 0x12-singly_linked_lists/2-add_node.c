@@ -22,5 +22,5 @@ check->str = strdup(str);
 check->len = strlen(str);
 check->next = *head;
 *head = check;
-return (*head);
+return (check);
 }
