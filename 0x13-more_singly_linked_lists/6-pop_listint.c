@@ -19,7 +19,6 @@ result = (*head)->n;
 check = (*head)->next;
 free(*head);
 *head = check;
-head = NULL;
 return (result);
 }
 }

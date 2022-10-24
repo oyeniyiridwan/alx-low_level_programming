@@ -16,5 +16,5 @@ temp = check->next;
 free(check);
 check = temp;
 }
-head = NULL;
+*head = NULL;
 }

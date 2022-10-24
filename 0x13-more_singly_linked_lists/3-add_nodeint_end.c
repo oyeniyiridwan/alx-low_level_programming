@@ -11,7 +11,7 @@
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 listint_t *check, *check2;
-check = malloc(sizeof(*head));
+check = malloc(sizeof(listint_t));
 if (!check || !head)
 return (NULL);
 check->n = n;
