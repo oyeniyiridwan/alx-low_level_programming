@@ -20,4 +20,6 @@ check = temp;
 }
 *head = NULL;
 }
+else
+free(*head);
 }
