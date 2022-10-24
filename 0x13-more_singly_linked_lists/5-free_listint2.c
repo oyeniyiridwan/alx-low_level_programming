@@ -19,5 +19,4 @@ free(check);
 check = temp;
 }
 }
-*head = NULL;
 }
