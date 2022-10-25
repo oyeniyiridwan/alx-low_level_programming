@@ -11,18 +11,21 @@ size_t print_listint_safe(const listint_t *head)
 {
 const listint_t *check, *head2;
 size_t i = 0;
+check = malloc(sizeof(listint_t));
+head2 = malloc(sizeof(listint_t));
+check = head;
 head2 = head;
-while (head2)
+while (head)
 {
+if (head2->next == check)
+{
+free((void *)check);
+free((void *)head2);
+return (i);
+}
 i++;
 printf("[%p] %d\n", (void *)head2, head2->n);
-check = head2;
 head2 = head2->next;
-if (check <= head2)
-{
-printf("[%p] %d\n", (void *)head2, head2->n);
-break;
 }
-}
-return (i);
+exit(98);
 }

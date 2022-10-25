@@ -18,7 +18,7 @@ i++;
 printf("[%p] %d\n", (void *)head2, head2->n);
 check = head2;
 head2 = head2->next;
-if (check <= head2)
+if(check == head2)
 {
 printf("[%p] %d\n", (void *)head2, head2->n);
 break;
