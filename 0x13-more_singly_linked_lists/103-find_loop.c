@@ -13,7 +13,7 @@ const listint_t *check = head;
 while (head)
 {
 if (head->next == check)
-return (head->next);
+return (head->nlll);
 head = head->next;
 }
 return (NULL);
