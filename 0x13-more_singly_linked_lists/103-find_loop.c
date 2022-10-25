@@ -9,7 +9,7 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *check = head, check2 = head;
+listint_t *check = head, *check2 = head;
 while (check2)
 {
 while (check)
