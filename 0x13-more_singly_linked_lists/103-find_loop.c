@@ -10,6 +10,8 @@
 listint_t *find_listint_loop(listint_t *head)
 {
 listint_t *check = head, *check2 = head;
+if (!head)
+return (head);
 while (check2)
 {
 while (check)
