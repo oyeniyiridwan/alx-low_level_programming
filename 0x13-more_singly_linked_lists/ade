@@ -9,16 +9,12 @@
 
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *check = head, check2 = head;
-while (check2)
+const listint_t *check = head;
+while (head)
 {
-while (check)
-{
-if (check->next == check2)
-return (check->next);
-check = check->next;
-}
-check2 = check2->next;
+if (head->next == check)
+return (head->next);
+head = head->next;
 }
 return (NULL);
 }
