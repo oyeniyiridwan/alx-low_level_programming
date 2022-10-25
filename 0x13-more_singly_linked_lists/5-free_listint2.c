@@ -9,17 +9,15 @@
 
 void free_listint2(listint_t **head)
 {
-listint_t *temp, *check = *head;
-if (head && *head)
+listint_t *temp, **check = head;
+if (check != NULL)
 {
-while (check)
+while (*head != NULL)
 {
-temp = check->next;
-free(check);
-check = temp;
+temp = *head;
+*head = (*head)->next;
+free(temp);
 }
-*head = NULL;
+*check = NULL;
 }
-else
-free(*head);
 }
