@@ -19,7 +19,7 @@ return (0);
 if (buff == NULL)
 return (0);
 res = read(fd, buff, letters);
-p = write(1, buff, res);
+p = write(STDOUT_FILENO, buff, res);
 if (p == -1 || res == -1)
 {
 free(buff);
