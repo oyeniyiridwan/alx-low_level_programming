@@ -20,7 +20,10 @@ if (text_content != NULL)
 {
 p = write(fd, text_content, i);
 if (p == -1)
+{
+write(1, "fails", 6);
 return (-1);
+}
 }
 close(fd);
 return (1);

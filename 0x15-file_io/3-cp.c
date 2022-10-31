@@ -32,7 +32,7 @@ if (p == -1)
 dprintf(STDERR_FILENO, "Error: Can't close fd %i", p);
 exit(100);
 }
-fd2 = open(av[2], O_CREAT | O_WRONLY | 0_ TRUNC, 664);
+fd2 = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 664);
 res =  write(fd2, buff, i);
 if (fd2 == -1 || res == -1)
 {
