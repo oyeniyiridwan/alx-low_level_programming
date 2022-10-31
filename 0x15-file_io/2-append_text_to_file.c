@@ -14,7 +14,10 @@ int fd = open(filename, O_WRONLY | O_APPEND), i;
 for (i = 0; text_content[i]; i++)
 if (fd == -1 || filename == NULL)
 return (-1);
+if (text_content != NUUL)
+{
 write(fd, text_content, i);
+}
 close(fd);
 return (1);
 }
