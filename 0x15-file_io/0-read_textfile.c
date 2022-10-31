@@ -23,5 +23,6 @@ int p = (write(1, &(buff[i]), 1));
 if  (p == -1)
 return (0);
 }
+free(buff);
 return (i);
 }

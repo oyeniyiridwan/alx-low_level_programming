@@ -44,5 +44,6 @@ if (p == -1)
 dprintf(2, "Error: Can't close fd %i", p);
 exit(100);
 }
+free(buff);
 return (0);
 }
