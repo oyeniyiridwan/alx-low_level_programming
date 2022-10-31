@@ -10,7 +10,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600), i = 0, p;
+int fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600), i = 0, p;
 while (text_content[i] != '\0')
 {
 i++;
@@ -27,7 +27,12 @@ if (p == -1)
 close(fd);
 return (-1);
 }
-}
 close(fd);
 return (1);
+}
+else
+{
+close(fd);
+return (1);
+}
 }
