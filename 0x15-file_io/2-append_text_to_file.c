@@ -22,7 +22,6 @@ res = write(fd, text_content, i);
 if (res == -1)
 {
 close(fd);
-write(STDOUT_FILENO, "fails", 5);
 return (-1);
 }
 close(fd);
