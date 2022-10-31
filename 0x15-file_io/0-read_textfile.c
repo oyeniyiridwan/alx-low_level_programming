@@ -10,19 +10,21 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-int fd = open(filename, O_RDONLY), i;
+int fd = open(filename, O_RDONLY), res, p;
 char *buff = malloc(sizeof(char) * letters);
-if (fd == -1 || filename == NULL)
+if (filename == NULL)
 return (0);
-read(fd, buff, letters);
+if (fd == -1)
+return (0);
+res = read(fd, buff, letters);
 buff[letters] = '\0';
-close(fd);
-for (i = 0; buff[i]; i++)
+p = write(1, buff, res);
+if (p == -1 || res == -1)
 {
-int p = (write(1, &(buff[i]), 1));
-if  (p == -1)
+free(buff);
 return (0);
 }
 free(buff);
-return (i);
+close(fd);
+return (p);
 }

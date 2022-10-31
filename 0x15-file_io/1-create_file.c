@@ -10,9 +10,11 @@
 
 int create_file(const char *filename, char *text_content)
 {
-int fd = open(filename, O_CREAT | O_WRONLY, 0600), i, p;
+int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600), i, p;
 for (i = 0; text_content[i]; i++)
-if (fd == -1 || filename == NULL)
+if (filename == NULL)
+return (-1);
+if (fd == -1)
 return (-1);
 p = write(fd, text_content, i);
 if (p == -1)
