@@ -16,6 +16,8 @@ if (filename == NULL)
 return (0);
 if (fd == -1)
 return (0);
+if (buff == NULL)
+return (0);
 res = read(fd, buff, letters);
 buff[letters] = '\0';
 p = write(1, buff, res);
